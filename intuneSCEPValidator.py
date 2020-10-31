@@ -34,6 +34,6 @@ def ValidateRequestAsync(transactionId, certificateRequest):
     PostAsync(json_body, VALIDATION_URL, transactionId, parameters)
 
 def PostAsync(body, url_Suffix, transactionId, parameters):
-    intuneClient.PostAsync(VALIDATION_SERVICE_NAME, url_Suffix, DEFAULT_SERVICE_VERSION, body, transactionId)
+    intuneClient.PostAsync(VALIDATION_SERVICE_NAME, url_Suffix, DEFAULT_SERVICE_VERSION, body, transactionId, parameters)
 
 

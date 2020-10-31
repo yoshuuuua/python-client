@@ -4,10 +4,7 @@ import os
 import sys
 import adal
 
-def get_token():
-    with open('PARAMETERS.json') as f:
-        parameters = json.load(f)
-
+def get_token(parameters):
     authority_url = (parameters['authorityHostUrl'] + '/' + parameters['tenant'])
     GRAPH_RESOURCE = '00000002-0000-0000-c000-000000000000'
     RESOURCE = parameters.get('resource', GRAPH_RESOURCE)
